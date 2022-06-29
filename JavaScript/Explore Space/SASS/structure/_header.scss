@@ -1,0 +1,59 @@
+@use "../Helpers/placeholders" as *;
+
+header {
+  @extend %flex-between;
+  .logo {
+    flex-basis: 10%;
+  }
+  nav {
+    width: 55%;
+    position: absolute;
+    right: 0;
+    .main-links {
+      @extend %flex-evenly;
+      background-color: rgba(#fff, 0.1);
+      backdrop-filter: blur(20px);
+      padding: 0 100px;
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: -45%;
+        transform: translateY(-50%);
+        width: 50%;
+        height: 1px;
+        background-color: rgba(#fff, 0.5);
+      }
+    }
+    .link-item {
+      position: relative;
+      counter-increment: link-counter;
+      margin-right: 20px;
+      &::before {
+        position: absolute;
+        content: "0" counter(link-counter);
+        left: -25px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: #fff;
+      }
+      &.active::after {
+        position: absolute;
+        content: "";
+        width: calc(100% + 25px);
+        top: 100%;
+        left: -25px;
+        background-color: #fff;
+        height: 2px;
+      }
+      a {
+        display: inline-block;
+        padding: 25px 0;
+        font-size: 15px;
+        color: rgba(#fff, 0.7);
+        text-transform: uppercase;
+      }
+    }
+  }
+}

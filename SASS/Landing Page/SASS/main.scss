@@ -1,0 +1,128 @@
+@use './mixins.scss' as *;
+@use './globalrules' as *;
+
+/* start landing*/
+.landing {
+    position: relative;
+    background-image: url(../images/desktop/image-hero.jpg);
+    background-size: cover;
+    height: 70vh;
+    &::before {
+        @include over-Lay(#000,0.5);
+    }
+    .container {
+        position: relative;
+    }
+    li {
+        padding: 0 15px;
+        a {
+            text-decoration: none;
+            color: #fff;
+        }    
+    }
+    .text {
+        width: 35%;
+        margin-top: 100px;
+        border: 2px solid #fff;
+        padding: 20px 30px;
+        @include mediaQueries("mobile") {
+            width: 100%;
+        }
+        h1 {
+            color: #fff;
+            font-size: 50px;
+            letter-spacing: 7px;
+            text-transform: uppercase;
+        }
+    }
+}
+/* end landing*/
+
+/* start var*/
+.vr-section {
+    position: relative;
+    .text-var {
+        padding: 50px 70px;
+        background-color: #fff;
+        position: absolute;
+        right: 280px;
+        bottom: 0px;
+        h2 {
+            font-size: 40px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+        p {
+            font-size: 14px;
+            color: rgba(#000,0.5)
+        }
+    
+    }
+}
+/* end var*/
+/* start creation*/
+.creation {
+        margin-bottom: 200px;
+        .head {
+              h3 {
+            text-transform: uppercase;
+            font-size: 35px;
+        }
+           button {
+            background: none;
+            padding: 5px 35px;
+            text-transform: uppercase;
+            &:hover {
+                background-color: #222;
+                color: #fff;
+                transition: 0.3s;
+            }
+        }
+    }
+    .box {
+        position: relative;
+        &::before {          
+            @include over-Lay(#000,0.5);
+            width: calc(100% - 24px);
+            left: 12px;
+        }
+        h4 {
+            position: absolute;
+            bottom: 25px;
+            left: 30px;
+            color: rgba(#fff, 0.8);
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+        img {
+            width: 100%;
+        }
+      
+    }
+}
+/* end creation*/
+/* start footer*/
+footer {
+    background-color: #000;
+    .logo,.social-icons {
+        margin-bottom: 40px;
+    }
+    .nav {
+        li {
+            padding: 0 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+    .social-icons {
+        li {
+            margin-right: 15px;
+        }
+    }
+    .copyright {
+        color: #fff;
+    }
+}
+/* end footer*/

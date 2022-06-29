@@ -1,0 +1,201 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-box .pages .bullets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .main-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+}
+header nav {
+  width: 55%;
+  position: absolute;
+  right: 0;
+}
+header nav .main-links {
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  padding: 0 100px;
+}
+header nav .main-links::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -45%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 50%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+header nav .link-item {
+  position: relative;
+  counter-increment: link-counter;
+  margin-right: 20px;
+}
+header nav .link-item::before {
+  position: absolute;
+  content: "0" counter(link-counter);
+  left: -25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 16px;
+  color: #fff;
+}
+header nav .link-item.active::after {
+  position: absolute;
+  content: "";
+  width: calc(100% + 25px);
+  top: 100%;
+  left: -25px;
+  background-color: #fff;
+  height: 2px;
+}
+header nav .link-item a {
+  display: inline-block;
+  padding: 25px 0;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  background-size: cover;
+  height: 100vh;
+  padding: 25px 0;
+}
+
+main {
+  background-image: url(../../assets/crew/background-crew-desktop.jpg);
+}
+
+.main-box {
+  position: relative;
+  top: 50px;
+  padding: 0 200px;
+}
+.main-box .meet-crew {
+  position: relative;
+  left: 30px;
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+.main-box .meet-crew::before {
+  position: absolute;
+  content: "02";
+  left: -30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 20px;
+  font-weight: 500;
+}
+.main-box .crew-members .row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main-box .crew-members .member-info .position,
+.main-box .crew-members .member-info .name {
+  text-transform: uppercase;
+}
+.main-box .crew-members .member-info .position {
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+.main-box .crew-members .member-info .name {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: 4px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  line-height: 1;
+}
+.main-box .crew-members .member-info .brief {
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 2;
+  font-size: 15px;
+  padding-right: 100px;
+}
+.main-box .crew-members .member-pic img {
+  max-width: 600px;
+  max-height: 500px;
+  position: relative;
+  top: 78px;
+}
+.main-box .pages .bullets .bullet {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #444;
+  margin-right: 25px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.main-box .pages .bullets .bullet.active {
+  background-color: #fff;
+}

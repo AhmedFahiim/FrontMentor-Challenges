@@ -1,0 +1,91 @@
+@use "../structure/header" as *;
+@use "../Helpers/global-rules" as *;
+@use "../Helpers/placeholders" as *;
+
+main {
+  background-image: url(../../assets/destination/background-destination-desktop.jpg);
+}
+.main-box {
+  position: relative;
+  top: 50px;
+  margin-left: 150px;
+  .pic-word {
+    position: relative;
+    margin-bottom: 70px;
+    font-size: 25px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: rgba(#fff, 0.8);
+    &::before {
+      position: absolute;
+      content: "01";
+      left: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(#fff, 0.4);
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+  .planets-info {
+    .row {
+      justify-content: space-around;
+    }
+    .planets-links {
+      @extend %flex-start;
+      .link-item-planet {
+        color: rgba(#fff, 0.6);
+        margin-right: 20px;
+        padding: 8px 0;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-bottom: 3px solid transparent;
+        &.active {
+          border-bottom-color: #fff;
+        }
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+    .planet-breif {
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(#fff, 0.3);
+      .name {
+        font: {
+          size: 100px;
+          weight: 100;
+        }
+        color: #fff;
+        margin: 20px 0;
+        letter-spacing: 10px;
+      }
+      .summury {
+        color: rgba(#fff, 0.6);
+        font-size: 15px;
+        line-height: 1.5;
+      }
+    }
+    .distance-time {
+      margin-top: 20px;
+      .head {
+        font: {
+          size: 13px;
+          weight: normal;
+        }
+        color: rgba(#fff, 0.6);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+      }
+      .number {
+        font-size: 30px;
+        color: #fff;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

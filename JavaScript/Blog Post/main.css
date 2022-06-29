@@ -1,0 +1,122 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.holder {
+  width: 65%;
+  display: flex;
+}
+.holder .img,
+.holder .text {
+  flex-basis: 50%;
+}
+.holder .img img {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+}
+.holder .text {
+  height: 100%;
+  padding: 30px 70px 20px 40px;
+  background-color: #fff;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.holder .text h1 {
+  color: hsl(217, 19%, 35%);
+  font-size: 27px;
+}
+.holder .text p {
+  margin: 15px 0;
+  line-height: 1.8;
+  color: hsl(214, 17%, 51%);
+}
+.text .data {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.text .data img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.text .data .main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.text .data .name span {
+  display: block;
+}
+.text .data .share {
+  width: 40px;
+  height: 40px;
+  background-color: hsl(212, 23%, 69%);
+  border-radius: 50%;
+  padding: 10px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+.text .data .icons {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 200px;
+  background-color: hsl(217, 19%, 35%);
+  top: -70px;
+  left: 95%;
+  transform: translateX(-50%);
+  padding: 12px;
+  border-radius: 8px;
+  display: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.text .data .icons::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+}
+.text .data .icons.active {
+  display: flex;
+}
+.text .data .share img,
+.text .data .icons img {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+.text .data .icons span {
+  color: hsl(212, 23%, 69%);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+@media (max-width: 991px) {
+  .holder {
+    flex-direction: column;
+    width: calc(100% - 30px);
+  }
+  .holder .text {
+    padding: 15px;
+    border-radius: 0;
+  }
+}

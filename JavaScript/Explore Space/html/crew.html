@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google font link tags -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap cdn link tag  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css"
+      integrity="sha512-Aa+z1qgIG+Hv4H2W3EMl3btnnwTQRA47ZiSecYSkWavHUkBF2aPOIIvlvjLCsjapW1IfsGrEO3FU693ReouVTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css link tag -->
+    <link rel="stylesheet" href="../css/Pages/crew.css" />
+
+    <title>Crew</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <header>
+          <div class="logo">
+            <img src="../assets/shared/logo.svg" alt="logo" class="img-fluid" />
+          </div>
+          <nav>
+            <ul class="main-links">
+              <li class="link-item"><a href="home.html">Home</a></li>
+              <li class="link-item">
+                <a href="destination.html">Destination</a>
+              </li>
+              <li class="link-item active"><a href="crew.html">Crew</a></li>
+              <li class="link-item">
+                <a href="technology.html">Technology</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      <section class="main-box">
+        <div class="container">
+          <div class="head-word">
+            <h1 class="meet-crew">Meet Your Crew</h1>
+          </div>
+          <article class="crew-members">
+            <div class="row">
+              <div class="member-info col-lg-6">
+                <h1 class="position" id="position"></h1>
+                <h2 class="name" id="name"></h2>
+                <p class="brief" id="brief"></p>
+              </div>
+              <div class="member-pic col-lg-4">
+                <img src="" alt="crew" id="member-img" />
+              </div>
+            </div>
+          </article>
+          <div class="pages">
+            <ul class="bullets">
+              <li class="bullet active"></li>
+              <li class="bullet"></li>
+              <li class="bullet"></li>
+              <li class="bullet"></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="../Javascript/crew.js" type="module"></script>
+    <script src="../Javascript/main.js" type="module"></script>
+  </body>
+</html>

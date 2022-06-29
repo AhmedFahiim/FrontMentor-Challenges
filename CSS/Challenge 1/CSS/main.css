@@ -1,0 +1,31 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #d5e1ef;
+}
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 15px;
+  border-radius: 6px;
+  width: 220px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.box img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+.box .img-caption {
+  text-align: center;
+}
+.box h3 {
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+.box p {
+  color: #777;
+  text-transform: capitalize;
+  font-size: 14px;
+}

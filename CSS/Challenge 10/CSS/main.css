@@ -1,0 +1,133 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: hsl(229, 57%, 11%);
+  background-image: url(../images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -80%;
+  height: 100vh;
+}
+img {
+  cursor: pointer;
+}
+.container {
+  width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+}
+.container .holder {
+  padding: 30px;
+  background-color: hsl(228, 56%, 26%);
+}
+.container .type {
+  flex-basis: 20%;
+  border-radius: 10px;
+  border-top-right-radius: 80px;
+}
+.container .icons {
+  margin-top: 15px;
+}
+.container .icons img {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 5px;
+}
+.container .progress {
+  flex-basis: 63%;
+  border-radius: 10px;
+}
+.container .progress p {
+  color: rgba(255 255 255 /0.7);
+  word-spacing: 2px;
+  margin: 12px 0;
+}
+.container .progress p span {
+  color: white;
+  font-style: oblique;
+  font-size: 13px;
+  font-weight: 600;
+}
+.container .progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 20px;
+  position: relative;
+}
+.container .progress-bar::before {
+  content: attr(data-progress) " GB left";
+  position: absolute;
+  right: 0;
+  top: -97px;
+  background-color: white;
+  color: hsl(228, 56%, 26%);
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.container .progress-bar::after {
+  content: "";
+  position: absolute;
+  border-width: 20px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+  top: -68px;
+  right: 0px;
+}
+.container .progress-bar span {
+  display: block;
+  height: 100%;
+  background-image: linear-gradient(
+    -90deg,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  position: relative;
+  border-radius: 20px;
+}
+.container .progress-bar span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: white;
+}
+.container .progress .space {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-weight: 600;
+}
+/* start media queries */
+@media (max-width: 767px) {
+  body {
+    background-image: none;
+  }
+  .container {
+    width: 375px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .container .progress-bar::before {
+    width: fit-content;
+    top: 63px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+  }
+  .container .progress-bar::after {
+    display: none;
+  }
+}

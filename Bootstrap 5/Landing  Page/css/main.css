@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* start header */
+.main-btn {
+  background-color: hsl(12, 88%, 59%);
+  color: #fff;
+}
+.main-btn:hover {
+  background-color: #fff;
+  color: black;
+}
+/* end header */
+/* start landing */
+@media (min-width: 767px) and (max-width: 1199px) {
+  .landing .img img {
+    height: 300px;
+  }
+}
+/* end landing */
+/* start what-diffrent */
+.what .box {
+  counter-increment: number;
+}
+.what .box h2::before {
+  position: absolute;
+  content: counter(number);
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: fit-content;
+  height: auto;
+  background-color: hsl(12, 88%, 59%);
+  padding: 5px 10px;
+  border-radius: 9999px;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .what .box h2::before {
+    display: none;
+  }
+}
+.what h2,
+.what h1 {
+  color: hsl(228, 39%, 23%);
+}
+/* end what-diffrent */
+/* start what they have said */
+.what-they-said h3 {
+  color: hsl(233, 12%, 13%);
+}
+.what-they-said .box {
+  background-color: hsl(0, 0%, 98%);
+  transition: 0.5s;
+}
+.what-they-said .box:hover {
+  transform: translateY(-30px);
+}
+.what-they-said .box img {
+  width: 70px;
+  top: -30px;
+}
+/* end what they have said */
+/* start simplify */
+.simplify {
+  background-color: hsl(12, 88%, 59%);
+  background-image: url(../images/bg-simplify-section-desktop.svg);
+  background-position: center;
+  background-size: cover;
+}
+/* end simplify */
+/* start footer */
+footer {
+  background-color: hsl(233, 12%, 13%);
+}
+/* end footer */

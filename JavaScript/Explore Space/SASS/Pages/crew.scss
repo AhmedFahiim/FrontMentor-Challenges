@@ -1,0 +1,94 @@
+@use "../structure/header" as *;
+@use "../Helpers/global-rules" as *;
+@use "../Helpers/placeholders" as *;
+
+main {
+  background-image: url(../../assets/crew/background-crew-desktop.jpg);
+}
+
+.main-box {
+  position: relative;
+  top: 50px;
+  padding: 0 200px;
+  .meet-crew {
+    position: relative;
+    left: 30px;
+    font-size: 25px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: rgba(#fff, 0.8);
+    &::before {
+      position: absolute;
+      content: "02";
+      left: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(#fff, 0.4);
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .crew-members {
+    .row {
+      justify-content: space-between;
+      align-items: center;
+    }
+    .member-info {
+      .position,
+      .name {
+        text-transform: uppercase;
+      }
+      .position {
+        font-size: 25px;
+        color: rgba(#fff, 0.5);
+        font-weight: 300;
+        letter-spacing: 4px;
+      }
+      .name {
+        color: rgba(#fff, 0.9);
+        font : {
+          weight: 500;
+          size: 40px;
+        }
+        letter-spacing: 4px;
+        margin: {
+          top: 20px;
+          bottom: 30px;
+        }
+        line-height: 1;
+      }
+      .brief {
+        color: rgba(#fff, 0.5);
+        line-height: 2;
+        font-size: 15px;
+        padding-right: 100px;
+      }
+    }
+    .member-pic {
+      img {
+        max-width: 600px;
+        max-height: 500px;
+        position: relative;
+        top: 78px;
+      }
+    }
+  }
+  .pages {
+    .bullets {
+      @extend %flex-start;
+      .bullet {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #444;
+        margin-right: 25px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        &.active {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}

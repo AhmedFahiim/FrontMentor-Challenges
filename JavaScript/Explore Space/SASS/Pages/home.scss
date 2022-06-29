@@ -1,0 +1,67 @@
+@use "../structure/header" as *;
+@use "../Helpers/global-rules" as *;
+@use "../Helpers/placeholders" as *;
+
+// Home Page
+main {
+  background-image: url("../../assets/home/background-home-desktop.jpg");
+
+  .main-box {
+    @extend %flex-between;
+    position: relative;
+    top: 250px;
+    .content-box {
+      flex-basis: 50%;
+      padding: {
+        right: 100px;
+        left: 100px;
+      }
+      .head,
+      .text {
+        color: rgba(#fff, 0.7);
+      }
+      .head {
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .space {
+        color: #fff;
+        font-size: 100px;
+        font-weight: normal;
+        letter-spacing: 3px;
+        margin: 20px 0;
+      }
+      .text {
+        line-height: 1.7;
+        word-break: break-all;
+      }
+    }
+    .explore-ball {
+      flex-basis: 15%;
+      height: 200px;
+      @extend %flex-center;
+      background-color: #fff;
+      border-radius: 50%;
+      align-self: flex-end;
+      margin-right: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background-color: rgba(#fff, 0.1);
+        backdrop-filter: blur(5px);
+        transform: rotate(2turn);
+      }
+      &:hover .explore {
+        color: #fff;
+      }
+      .explore {
+        color: #4e5163;
+        text-transform: uppercase;
+        font-size: 25px;
+        letter-spacing: 2px;
+        transition: 0.3s;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use "./variables.scss" as *;
+
+body {
+  background-color: $body-color !important;
+  height: 100vh;
+}
+
+img {
+  transition: 0.3s;
+  &:hover {
+    transform: scale(5);
+  }
+}

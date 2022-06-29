@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.holder {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.holder .content {
+  flex-basis: 50%;
+  background-image: url(/images/bg-pattern-desktop.svg);
+  background-size: cover;
+  padding: 20px 50px;
+}
+.holder .content h1 {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 40px;
+  margin-top: 70px;
+}
+.holder .content h1 span:first-child {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+.holder .content h1 span:last-child {
+  color: #222;
+}
+.holder .content p {
+  color: hsl(0, 36%, 70%);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.form {
+  position: relative;
+}
+.form .error {
+  position: absolute;
+  color: hsl(0, 93%, 68%);
+  font-size: 13px;
+  bottom: -20px;
+  left: 9px;
+  display: none;
+}
+.holder .content .form input,
+.holder .content .form button {
+  border: none;
+  border-radius: 9999px;
+}
+.holder .content .form input {
+  border: 1px solid hsl(0, 36%, 70%);
+  padding: 10px 25px;
+  outline: none;
+}
+.holder .content .form input::placeholder {
+  color: hsl(0, 36%, 70%);
+  font-size: 12px;
+}
+.holder .content .form button {
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  width: 50px;
+  padding: 10px 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: -35px;
+  top: 5px;
+  cursor: pointer;
+}
+.holder .img {
+  flex-basis: 47%;
+}
+.holder .img img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+}

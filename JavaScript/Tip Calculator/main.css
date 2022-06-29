@@ -1,0 +1,168 @@
+body {
+  height: 100vh;
+  background-color: hsl(185, 41%, 84%);
+  display: grid;
+  place-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.holder {
+  width: 50%;
+}
+.holder h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 50px;
+  color: hsl(186, 14%, 43%);
+  font-weight: 500;
+}
+.holder .main {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+}
+.holder .main .calc,
+.holder .main .view-area {
+  flex-basis: 47%;
+}
+.holder .main .calc .bill,
+.holder .main .calc .tip {
+  margin-bottom: 25px;
+}
+.holder .main .calc label,
+.holder .main .calc span {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  color: hsl(186, 14%, 43%);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.holder .main .calc label::after {
+  position: absolute;
+  content: "$";
+  top: 34px;
+  left: 11px;
+}
+.holder .calc .number-people label::before {
+  position: absolute;
+  content: "Can't be zero";
+  top: 4px;
+  left: 230px;
+  font-size: 12px;
+  color: rgba(255, 0, 0, 0.438);
+  display: none;
+}
+.holder .main .calc input:not(.custom) {
+  width: 90%;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+  font-size: 17px;
+  padding: 8px 10px;
+  text-align: right;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+.holder .main .calc label::after,
+.holder .main .calc input::placeholder {
+  color: hsl(184, 14%, 56%);
+  opacity: 0.6;
+  font-weight: bold;
+}
+.holder .main .calc input:focus {
+  border-color: hsl(172, 67%, 45%);
+}
+.holder .main .number-people.error input {
+  border-color: rgba(255, 0, 0, 0.438);
+}
+.holder .main .number-people.error label::before {
+  display: block;
+}
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  display: none;
+}
+.holder .main .calc .tip button,
+.holder .main .calc .tip .custom {
+  width: calc(100% / 4);
+  padding: 8px 13px;
+  text-align: center;
+  cursor: pointer;
+}
+.holder .main .calc .tip button {
+  background-color: hsl(183, 100%, 15%);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  transition: 0.2s;
+}
+.holder .main .calc .tip button:hover {
+  background-color: #9fe8df;
+  color: hsl(183, 100%, 15%);
+}
+.holder .main .calc .tip .custom {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(186, 14%, 43%);
+  font-weight: bold;
+  border: none;
+}
+.holder .view-area {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 8px;
+  padding: 25px;
+}
+.holder .view-area .tip-amount,
+.holder .view-area .total-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.holder .view-area .text {
+  position: relative;
+  color: hsl(185, 41%, 84%);
+  font-weight: bold;
+  font-size: 13px;
+}
+.holder .view-area .text::after {
+  position: absolute;
+  content: "/ Person";
+  top: 20px;
+  left: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: hsl(184, 14%, 56%);
+}
+.holder .view-area .amount {
+  font-size: 35px;
+  font-weight: bold;
+  color: hsl(172, 67%, 45%);
+}
+.holder .view-area button {
+  width: 100%;
+  background-color: hsl(186, 14%, 43%);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.holder .view-area button:hover {
+  background-color: #9fe8df;
+  color: #222;
+}

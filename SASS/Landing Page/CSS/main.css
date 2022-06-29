@@ -1,0 +1,150 @@
+ul {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Abel", sans-serif !important;
+}
+
+/* start landing*/
+.landing {
+  position: relative;
+  background-image: url(../images/desktop/image-hero.jpg);
+  background-size: cover;
+  height: 70vh;
+}
+.landing::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.landing .container {
+  position: relative;
+}
+.landing li {
+  padding: 0 15px;
+}
+.landing li a {
+  text-decoration: none;
+  color: #fff;
+}
+.landing .text {
+  width: 35%;
+  margin-top: 100px;
+  border: 2px solid #fff;
+  padding: 20px 30px;
+}
+@media (max-width: 767px) {
+  .landing .text {
+    width: 100%;
+  }
+}
+.landing .text h1 {
+  color: #fff;
+  font-size: 50px;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+
+/* end landing*/
+/* start var*/
+.vr-section {
+  position: relative;
+}
+.vr-section .text-var {
+  padding: 50px 70px;
+  background-color: #fff;
+  position: absolute;
+  right: 280px;
+  bottom: 0px;
+}
+.vr-section .text-var h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.vr-section .text-var p {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* end var*/
+/* start creation*/
+.creation {
+  margin-bottom: 200px;
+}
+.creation .head h3 {
+  text-transform: uppercase;
+  font-size: 35px;
+}
+.creation .head button {
+  background: none;
+  padding: 5px 35px;
+  text-transform: uppercase;
+}
+.creation .head button:hover {
+  background-color: #222;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.creation .box {
+  position: relative;
+}
+.creation .box::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: calc(100% - 24px);
+  left: 12px;
+}
+.creation .box h4 {
+  position: absolute;
+  bottom: 25px;
+  left: 30px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.creation .box img {
+  width: 100%;
+}
+
+/* end creation*/
+/* start footer*/
+footer {
+  background-color: #000;
+}
+footer .logo, footer .social-icons {
+  margin-bottom: 40px;
+}
+footer .nav li {
+  padding: 0 5px;
+}
+footer .nav a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .social-icons li {
+  margin-right: 15px;
+}
+footer .copyright {
+  color: #fff;
+}
+
+/* end footer*/

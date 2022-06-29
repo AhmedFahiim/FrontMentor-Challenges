@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+ul {
+  list-style: none;
+}
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 750px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+.landing {
+  position: relative;
+  height: 60vh;
+  background-color: hsl(356, 100%, 66%);
+  background-image: url(images/bg-pattern-intro-desktop.svg);
+  padding: 30px 0;
+  border-bottom-left-radius: 75px;
+}
+.landing header img {
+  width: 90px;
+}
+.landing header nav {
+  flex: 1;
+}
+.landing header nav .main {
+  margin-left: 70px;
+}
+.landing header nav .main > li {
+  position: relative;
+  color: hsl(0, 0%, 100%);
+  margin-right: 55px;
+  opacity: 0.9;
+  cursor: pointer;
+  z-index: 100;
+}
+.landing header nav .main > li::before {
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  content: "\f107";
+  right: -15px;
+  top: 3px;
+  font-weight: bold;
+  font-size: 12px;
+}
+.landing header nav .nested {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 7px 12px;
+  background-color: #fff;
+  border-radius: 8px;
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+.landing header nav .nested.open {
+  top: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.landing header nav .nested li {
+  color: #222;
+  margin-bottom: 7px;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+.landing header nav .nested li:hover {
+  opacity: 1;
+}
+.landing .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.landing .text h1 {
+  font-size: 45px;
+  word-spacing: 10px;
+  color: #fff;
+}
+.landing .text p {
+  margin: 15px 0 25px 0;
+  color: rgb(255 255 255 /0.8);
+}
+.landing a {
+  display: inline-block;
+  color: #fff;
+  margin-right: 20px;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: 0.3s;
+  border: 1px solid #fff;
+}
+.landing a.active,
+.landing a:hover {
+  background-color: #fff;
+  color: hsl(356, 100%, 66%);
+}

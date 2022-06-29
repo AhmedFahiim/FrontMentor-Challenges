@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.holder {
+  width: 80%;
+  background: url(images/bg-intro-desktop.png);
+  background-color: hsl(0, 100%, 74%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+}
+.holder .text,
+.holder .form {
+  flex-basis: 50%;
+}
+.holder .text {
+  color: #fff;
+  padding: 25px 30px 25px 75px;
+}
+.holder .text h1 {
+  font-size: 50px;
+  margin-bottom: 25px;
+}
+.holder .text p {
+  line-height: 1.8;
+  font-size: 14px;
+}
+.holder .form {
+  padding: 25px 75px 25px 0;
+}
+.holder .form .head {
+  background-color: hsl(248, 32%, 49%);
+  padding: 15px 25px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.holder .form .head .price {
+  color: rgb(255 255 255 /0.8);
+  font-size: 14px;
+}
+.holder .form form {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 6px;
+}
+.holder .form form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 13px 15px;
+  border: 1px solid hsl(246, 25%, 77%);
+  border-radius: 5px;
+  outline: none;
+}
+.holder .form form input + label {
+  display: block;
+  color: hsl(0, 100%, 74%);
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  visibility: hidden;
+}
+.holder .form form input[type="submit"] {
+  background-color: hsl(154, 59%, 51%);
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+.holder .form form p {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 20px;
+  color: hsl(246, 25%, 77%);
+}
+.holder .form form p .terms {
+  color: hsl(0, 100%, 74%);
+  font-weight: bold;
+}
+p.convert {
+  text-transform: capitalize;
+}

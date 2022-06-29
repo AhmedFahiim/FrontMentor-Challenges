@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google font link tags -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap cdn tag  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css"
+      integrity="sha512-Aa+z1qgIG+Hv4H2W3EMl3btnnwTQRA47ZiSecYSkWavHUkBF2aPOIIvlvjLCsjapW1IfsGrEO3FU693ReouVTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css link tag -->
+    <link rel="stylesheet" href="../css/Pages/destination.css" />
+
+    <title>Destination</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <header>
+          <div class="logo">
+            <img src="../assets/shared/logo.svg" alt="logo" class="img-fluid" />
+          </div>
+          <nav>
+            <ul class="main-links">
+              <li class="link-item"><a href="home.html">Home</a></li>
+              <li class="link-item active">
+                <a href="destination.html">Destination</a>
+              </li>
+              <li class="link-item"><a href="crew.html">Crew</a></li>
+              <li class="link-item">
+                <a href="technology.html">Technology</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      <section class="main-box">
+        <div class="container">
+          <h1 class="pic-word">Pick your destination</h1>
+          <div class="planets-info">
+            <div class="row">
+              <article class="planet-image col-lg-4">
+                <img src="" alt="" class="img-fluid" id="planet-image" />
+              </article>
+              <article class="planet-details col-lg-4">
+                <div class="tabs">
+                  <ul class="planets-links">
+                    <li class="link-item-planet active">moon</li>
+                    <li class="link-item-planet">mars</li>
+                    <li class="link-item-planet">europa</li>
+                    <li class="link-item-planet">titan</li>
+                  </ul>
+                </div>
+                <div class="planet-breif">
+                  <h2 class="name" id="planet-name"></h2>
+                  <p class="summury" id="planet-summary"></p>
+                </div>
+                <div class="distance-time">
+                  <div class="row">
+                    <div class="avg-distance col-lg-6">
+                      <h4 class="head">Avg. Distance</h4>
+                      <span class="number" id="distance-num"></span>
+                    </div>
+                    <div class="time col-lg-6">
+                      <h4 class="head">EST. Travel Time</h4>
+                      <span class="number" id="time-num"></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="../Javascript/destination.js" type="module"></script>
+    <script src="../Javascript/main.js" type="module"></script>
+  </body>
+</html>

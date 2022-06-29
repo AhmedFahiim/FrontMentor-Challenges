@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(204, 43%, 93%);
+}
+.container {
+  width: 900px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "join-us join-us" "subscripe why-us";
+}
+.container > div {
+  padding: 50px;
+}
+.container .join-us {
+  grid-area: join-us;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.container .join-us h3 {
+  color: hsl(179, 62%, 43%);
+  font-size: 30px;
+}
+.container .join-us h4 {
+  color: hsl(71, 73%, 54%);
+  margin: 24px 0 15px;
+  font-weight: normal;
+  font-size: 25px;
+}
+.container .join-us p {
+  line-height: 2;
+  color: #c6c9d0;
+  font-size: 19px;
+}
+.container .subscripe {
+  grid-area: subscripe;
+  background-color: hsl(179, 62%, 43%);
+  border-bottom-left-radius: 10px;
+}
+.container .subscripe h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 23px;
+}
+.container .price {
+  margin: 13px 0;
+}
+.container .price span:first-of-type {
+  font-size: 34px;
+  font-weight: 600;
+  color: white;
+  margin-right: 5px;
+}
+.container .price span:last-of-type {
+  font-size: smaller;
+  font-weight: 600;
+  color: rgb(255 255 255 /0.8);
+}
+.container .price p {
+  color: white;
+}
+.container .subscripe a {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  background-color: hsl(71, 73%, 54%);
+  border-radius: 9999px;
+  text-align: center;
+  font-weight: 900;
+}
+.container .why-us {
+  grid-area: why-us;
+  background-color: #4abebd;
+  border-bottom-right-radius: 10px;
+}
+.container .why-us h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 23px;
+  margin-bottom: 13px;
+}
+.container .why-us p {
+  color: rgb(255 255 255 /0.8);
+  line-height: 2;
+}
+/* start media queires */
+@media (max-width: 767px) {
+  .container {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    margin: 10px auto;
+  }
+  .container > div {
+    padding: 25px;
+    border-radius: 10px;
+  }
+  .container .join-us h4 {
+    font-size: 20px;
+  }
+}

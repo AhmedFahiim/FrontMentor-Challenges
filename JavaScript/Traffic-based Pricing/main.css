@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: hsl(230, 100%, 99%);
+}
+.main {
+  height: 45vh;
+  background-color: #f1f5fe;
+  padding: 15px 20px;
+  border-bottom-left-radius: 100px;
+}
+.head {
+  background: url(/images/pattern-circles.svg) no-repeat center;
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 50px;
+}
+.main .head h1 {
+  font-size: 30px;
+  color: hsl(227, 35%, 25%);
+  margin-bottom: 8px;
+}
+.main .head p {
+  font-size: 14px;
+  color: hsl(225, 20%, 60%);
+}
+/* start card */
+.price-card {
+  position: relative;
+  width: 35%;
+  background-color: #fff;
+  margin: -80px auto;
+  padding: 25px 0;
+  border-radius: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.price-card .price-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+.price-card .price-head .viewnum {
+  color: hsl(225, 20%, 60%);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.price-card .price-head .price {
+  position: relative;
+  font-size: 35px;
+  font-weight: bold;
+  color: hsl(227, 35%, 25%);
+  margin-right: 55px;
+}
+/* .price-card .monthly,
+.price-card .yearly {
+  position: absolute;
+  display: none;
+} */
+.price-card .monthly .price-head .price::after,
+.price-card .yearly .price-head .price::after {
+  position: absolute;
+  font-size: 12px;
+  top: 50%;
+  right: -48px;
+  transform: translateY(-50%);
+  color: hsl(225, 20%, 60%);
+}
+.price-card .monthly .price-head .price::after {
+  content: "/Month";
+}
+.price-card .yearly .price-head .price::after {
+  content: "/Year";
+}
+.price-card .range {
+  padding: 0 30px;
+  margin: 30px 0;
+}
+.price-card .range-holder {
+  position: relative;
+  height: 8px;
+  padding: 0 30px;
+  background-color: #ececec;
+  border-radius: 8px;
+}
+.price-card .range-holder .progress-bar {
+  position: absolute;
+  height: 100%;
+  background-color: hsl(174, 77%, 80%);
+  left: 0;
+  right: 90%;
+  border-radius: 8px;
+}
+.price-card .range .input {
+  position: relative;
+}
+.price-card .range .input input {
+  position: absolute;
+  height: 8px;
+  width: 100%;
+  top: -8px;
+  left: 0;
+  background-color: hsl(224, 65%, 95%);
+  background: none;
+  appearance: none;
+  pointer-events: none;
+  border-radius: 5px;
+}
+.price-card input::-webkit-slider-thumb {
+  pointer-events: auto;
+  appearance: none;
+  background-color: hsl(174, 86%, 45%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.price-card .swipper {
+  padding: 0 30px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price-card .swipper > span {
+  position: relative;
+  font-size: 12px;
+  font-weight: bold;
+  color: hsl(225, 20%, 60%);
+  letter-spacing: 1px;
+}
+.price-card .swipper .year::after {
+  position: absolute;
+  content: "25% Discount";
+  right: -100%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 3px 5px;
+  font-size: 9px;
+  color: hsl(15, 100%, 70%);
+  background-color: hsl(14, 92%, 95%);
+  border-radius: 4px;
+}
+.price-card .swipper .swap-holder {
+  position: relative;
+  flex-basis: 50px;
+  background-color: hsl(223, 50%, 87%);
+  padding: 12px 0px;
+  border-radius: 9999px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.price-card .swipper .swap-holder span {
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: 0.4s;
+}
+.price-card .swipper .swap-holder.swapped {
+  background-color: hsl(227, 35%, 25%);
+}
+.price-card .swipper .swap-holder.swapped span {
+  left: calc(100% - 22px);
+}
+.price-card .plan-features {
+  padding: 15px 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price-card .plan-features ul li {
+  color: hsl(225, 20%, 60%);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.price-card .plan-features ul li img {
+  margin-right: 4px;
+}
+.price-card .plan-features .start {
+  background: hsl(227, 35%, 25%);
+  color: #fff;
+  padding: 13px 22px;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 99px;
+  cursor: pointer;
+}
+hr {
+  border-top: none;
+  margin: 15px 0;
+}

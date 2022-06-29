@@ -1,0 +1,203 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-box .planets-info .planets-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .main-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+}
+header nav {
+  width: 55%;
+  position: absolute;
+  right: 0;
+}
+header nav .main-links {
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  padding: 0 100px;
+}
+header nav .main-links::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -45%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 50%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+header nav .link-item {
+  position: relative;
+  counter-increment: link-counter;
+  margin-right: 20px;
+}
+header nav .link-item::before {
+  position: absolute;
+  content: "0" counter(link-counter);
+  left: -25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 16px;
+  color: #fff;
+}
+header nav .link-item.active::after {
+  position: absolute;
+  content: "";
+  width: calc(100% + 25px);
+  top: 100%;
+  left: -25px;
+  background-color: #fff;
+  height: 2px;
+}
+header nav .link-item a {
+  display: inline-block;
+  padding: 25px 0;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  background-size: cover;
+  height: 100vh;
+  padding: 25px 0;
+}
+
+main {
+  background-image: url(../../assets/destination/background-destination-desktop.jpg);
+}
+
+.main-box {
+  position: relative;
+  top: 50px;
+  margin-left: 150px;
+}
+.main-box .pic-word {
+  position: relative;
+  margin-bottom: 70px;
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+.main-box .pic-word::before {
+  position: absolute;
+  content: "01";
+  left: -30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 20px;
+  font-weight: 500;
+}
+.main-box .planets-info .row {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.main-box .planets-info .planets-links .link-item-planet {
+  color: rgba(255, 255, 255, 0.6);
+  margin-right: 20px;
+  padding: 8px 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-bottom: 3px solid transparent;
+}
+.main-box .planets-info .planets-links .link-item-planet.active {
+  border-bottom-color: #fff;
+}
+.main-box .planets-info .planets-links .link-item-planet:hover {
+  color: #fff;
+}
+.main-box .planets-info .planet-breif {
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.main-box .planets-info .planet-breif .name {
+  font-size: 100px;
+  font-weight: 100;
+  color: #fff;
+  margin: 20px 0;
+  letter-spacing: 10px;
+}
+.main-box .planets-info .planet-breif .summury {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.main-box .planets-info .distance-time {
+  margin-top: 20px;
+}
+.main-box .planets-info .distance-time .head {
+  font-size: 13px;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.main-box .planets-info .distance-time .number {
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+}

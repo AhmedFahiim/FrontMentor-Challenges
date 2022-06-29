@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="images/logo.svg" alt="img">
+    <nav>
+      <ul class="main">
+        <li class="parent" data-index="0">Features
+          <img src="images/icon-arrow-down.svg" alt="img">
+          <ul class="nested Feat">
+            <li><img src="images/icon-todo.svg" alt="image">
+              Todo List</li>
+            <li><img src="images/icon-calendar.svg" alt="image">
+              Calender</li>
+            <li><img src="images/icon-reminders.svg" alt="image">
+              Remainders</li>
+            <li><img src="images/icon-planning.svg" alt="image">
+              Planing</li>
+          </ul>
+        </li>
+        <li class="parent" data-index="1">Company
+          <img src="images/icon-arrow-down.svg" alt="img">
+          <ul class="nested Com">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </ul>
+        </li>
+        <li>Careers</li>
+        <li>About</li>
+      </ul>
+    </nav>
+    <div class="form">
+      <button><a href="#">Login</a></button>
+      <button class="active"><a href="#">Register</a></button>
+    </div>
+  </header>
+  <section class="landing">
+    <div class="content">
+      <h1>Make<br> remote work
+      </h1>
+      <p>Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.
+      </p>
+      <a href="#">Learn more
+      </a>
+      <div class="brands">
+        <img src="images/client-databiz.svg" alt="image">
+        <img src="images/client-audiophile.svg" alt="image">
+        <img src="images/client-meet.svg" alt="image">
+        <img src="images/client-maker.svg" alt="image">
+      </div>
+    </div>
+    <div class="img">
+      <img src="images/image-hero-desktop.png" alt="image">
+    </div>
+  </section>
+  <script src="main.js"></script>
+</body>
+
+</html>

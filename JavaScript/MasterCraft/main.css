@@ -1,0 +1,376 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: hsl(0, 0%, 96%);
+  position: relative;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 750px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+.landing {
+  height: 50vh;
+  background-image: url(images/image-hero-desktop.jpg);
+  background-size: cover;
+  padding: 30px 0;
+}
+.landing nav,
+.landing nav ul {
+  display: flex;
+  align-items: center;
+}
+.landing nav {
+  justify-content: space-between;
+}
+.landing nav ul li {
+  color: white;
+  margin-right: 35px;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+.landing nav ul li:hover {
+  opacity: 1;
+}
+/* start main */
+/* master craft */
+.main {
+  width: 40%;
+  margin: -30px auto;
+}
+.main .master-craft {
+  position: relative;
+  text-align: center;
+  background-color: #fff;
+  padding: 30px 70px;
+  border-radius: 10px;
+}
+.main .master-craft img {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main .master-craft h1 {
+  font-size: 25px;
+  margin: 10px;
+  color: #222;
+}
+.main .master-craft p {
+  font-size: 14px;
+  color: rgb(0 0 0 /0.7);
+  margin-bottom: 30px;
+}
+.main .master-craft .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.main .master-craft .buttons button {
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+}
+.main .master-craft .buttons .back {
+  background-color: hsl(176, 50%, 47%);
+  color: #fff;
+  padding: 15px 25px;
+}
+.main .master-craft .buttons .mark {
+  position: relative;
+  padding: 15px 25px 15px 45px;
+  color: hsl(0, 0%, 48%);
+}
+.main .master-craft .buttons .mark::before {
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  content: "\f02e";
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: black;
+  color: hsl(0, 0%, 48%);
+  font-weight: bold;
+  width: 43.6px;
+  height: 100%;
+  border-radius: 50%;
+  line-height: 43.6px;
+}
+/* progress */
+.progress {
+  background-color: #fff;
+  padding: 30px 40px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+.progress .numbers-holder {
+  display: flex;
+  align-items: center;
+}
+.progress .numbers-holder .box {
+  padding: 20px 0;
+  flex-basis: calc(100% / 3);
+  text-align: center;
+}
+.progress .numbers-holder .box:not(:last-child) {
+  border-right: 2px solid hsl(0, 0%, 90%);
+}
+.progress .numbers-holder .box .num {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.progress .numbers-holder .box .lable {
+  font-size: 14px;
+  color: hsl(0, 0%, 70%);
+}
+.progress .progress-bar {
+  position: relative;
+  background-color: hsl(0, 0%, 90%);
+  height: 10px;
+  margin-top: 25px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.progress .progress-bar .perc {
+  position: absolute;
+  width: 70%;
+  background-color: hsl(176, 50%, 47%);
+  height: 100%;
+}
+/* about project  */
+.about-project {
+  background-color: #fff;
+  padding: 30px 40px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+.about-project h2 {
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+.about-project p {
+  line-height: 1.7;
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 25px;
+}
+.about-project .project {
+  padding: 25px;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 8px;
+}
+.about-project .project:not(:last-child) {
+  margin: 30px 0;
+}
+.project.stock-out {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.about-project .project .head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.about-project .project .head .left {
+  font-weight: bold;
+  font-size: 17px;
+}
+.about-project .project .head .right {
+  color: hsl(176, 50%, 47%);
+  font-size: 14px;
+}
+.about-project .project .foot {
+  display: flex;
+  justify-content: space-between;
+}
+.about-project .project .foot .nums-left {
+  position: relative;
+  font-size: 25px;
+  font-weight: bold;
+}
+.about-project .project .foot .nums-left::after {
+  position: absolute;
+  content: "left";
+  right: -25px;
+  top: 7px;
+  color: hsl(0, 0%, 65%);
+  font-size: 13px;
+}
+.about-project .project .foot .reward {
+  background-color: hsl(176, 50%, 47%);
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+}
+.about-project .project.stock-out .foot .reward {
+  background-color: hsl(0, 0%, 48%);
+}
+/* overlay */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 /0.7);
+  display: none;
+}
+.overlay .content {
+  position: relative;
+  width: 45%;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 25px;
+}
+.overlay .content-head {
+  position: relative;
+  margin-bottom: 20px;
+}
+.overlay .content-head h3 {
+  color: #222;
+  margin-bottom: 10px;
+}
+.overlay .content-head p {
+  line-height: 1.8;
+  color: hsl(0, 0%, 48%);
+}
+.overlay .content-head i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 18px;
+  cursor: pointer;
+}
+.overlay .content .project {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid hsl(0, 0%, 78%);
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+.overlay .content .project .selected {
+  flex-basis: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.overlay .content .project-details {
+  flex: 1;
+  padding-left: 20px;
+}
+.overlay .content .project-details .head {
+  display: flex;
+  justify-content: space-between;
+}
+.overlay .content .project-details .head h3 {
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.overlay .content .project-details .heads h3:last-child {
+  font-size: 14px;
+  margin-left: 15px;
+  color: hsl(176, 50%, 47%);
+}
+.overlay .content .project-details .head .left {
+  position: relative;
+  margin-right: 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.overlay .content .project-details .head .left::after {
+  position: absolute;
+  content: "left";
+  top: 3px;
+  right: -23px;
+  color: hsl(0, 0%, 38%);
+  font-size: 12px;
+  font-weight: bold;
+}
+.overlay .content .project-details p {
+  line-height: 1.7;
+  color: hsl(0, 0%, 48%);
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.overlay .content .project-details .enter-pledge {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0px;
+  display: none;
+}
+.overlay .content .project-details .enter-pledge .enter {
+  color: hsl(0, 0%, 48%);
+  font-size: 14px;
+}
+.overlay .content .project-details .pledge-buttons {
+  position: relative;
+}
+.overlay .content .project-details .pledge-buttons::after {
+  position: absolute;
+  font-family: "font awesome 6 free";
+  content: "\24";
+  top: 50%;
+  left: 11px;
+  transform: translateY(-50%);
+  color: hsl(0, 0%, 78%);
+}
+.overlay .content .project-details .pledge-buttons input {
+  width: 60px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 10px;
+  padding: 10px 15px;
+  border: 1px solid hsl(0, 0%, 78%);
+  border-radius: 9999px;
+  outline: none;
+}
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  display: none;
+}
+.overlay .content .project-details .pledge-buttons .Cont {
+  background-color: hsl(176, 50%, 47%);
+  padding: 10px 15px;
+  border-radius: 9999px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* active project */
+.overlay .content .project.active {
+  border-color: hsl(176, 50%, 47%);
+}
+.overlay .content .project.active .enter-pledge {
+  display: flex;
+}

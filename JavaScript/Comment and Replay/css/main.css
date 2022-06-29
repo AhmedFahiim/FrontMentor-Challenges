@@ -1,0 +1,335 @@
+body {
+  background-color: hsl(228deg, 33%, 97%) !important;
+  height: 100vh;
+}
+
+img {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+img:hover {
+  -webkit-transform: scale(5);
+          transform: scale(5);
+}
+
+.comments {
+  margin: 20px auto;
+}
+.comments .comment,
+.comments .replay {
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+.comments .holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.comments .score {
+  -ms-flex-preferred-size: 5%;
+      flex-basis: 5%;
+  background-color: #f3f3f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8px 5px;
+  border-radius: 5px;
+}
+.comments .score i {
+  color: #c8c7dc;
+  margin: 4px 0;
+  cursor: pointer;
+}
+.comments .score .number,
+.comments .score .number-replay {
+  color: #5358b4;
+  font-size: 14px;
+  font-weight: 500;
+}
+.comments .data {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+.comments .data .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.comments .data .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.comments .data .avatar img,
+.comments .data .avatar-replay img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.comments .data .personal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.comments .data .personal .name,
+.comments .data .personal .name-replay {
+  color: #4f5458;
+  margin-right: 5px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 15px;
+}
+.comments .data .personal .date,
+.comments .data .personal .date-replay {
+  color: #959596;
+  font-size: 13px;
+  font-weight: 500;
+}
+.comments .data .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.comments .data .rep-rep-box,
+.comments .data .com-rep-box {
+  color: #5358b4;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.comments .data .rep-rep-box i,
+.comments .data .com-rep-box i {
+  font-size: 13px;
+  margin-right: 2px;
+}
+.comments .data .rep-rep-box .replay-word,
+.comments .data .com-rep-box .replay-word {
+  font-weight: bold;
+  font-size: 14px;
+}
+.comments .data .rep-rep-box:hover,
+.comments .data .com-rep-box:hover {
+  opacity: 0.7;
+}
+.comments .rep-to {
+  font-size: 14px;
+  font-weight: 500;
+  color: #5358b4;
+}
+.comments .content,
+.comments .content-replay {
+  color: hsl(211deg, 10%, 45%);
+  font-size: 14px;
+  margin-top: 5px;
+  line-height: 1.6;
+}
+.comments .content-replay {
+  display: inline;
+}
+.comments .replaies {
+  position: relative;
+  width: 85%;
+  margin: 15px 0;
+  margin-left: auto;
+}
+.comments .replaies::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 2px;
+  background-color: hsl(223deg, 19%, 93%);
+  top: 0;
+  left: -10%;
+  border-radius: 2px;
+}
+.comments .post-comment {
+  background-color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.comments .post-comment .user-avatar {
+  -ms-flex-preferred-size: 5%;
+      flex-basis: 5%;
+}
+.comments .post-comment .user-avatar img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.comments .post-comment .comment-area {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 10px;
+}
+.comments .post-comment .comment-area textarea {
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid hsl(223deg, 19%, 93%);
+  resize: none;
+}
+.comments .post-comment .comment-area textarea::-webkit-input-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+}
+.comments .post-comment .comment-area textarea::-moz-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+}
+.comments .post-comment .comment-area textarea:-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+}
+.comments .post-comment .comment-area textarea::-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+}
+.comments .post-comment .comment-area textarea::placeholder {
+  font-weight: 500;
+  font-size: 14px;
+}
+.comments .post-comment .comment-area textarea:focus {
+  outline: none;
+}
+.comments .post-comment .send-button {
+  -ms-flex-preferred-size: 8%;
+      flex-basis: 8%;
+}
+.comments .post-comment .send-button .send {
+  background-color: #5358b4;
+  border: none;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.comments .post-comment .send-button .send:hover {
+  opacity: 0.8;
+}
+
+.you {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #5358b4;
+  margin: 0 5px;
+  padding: 5px 4px;
+}
+.you span {
+  font-size: 13px;
+  color: #fff;
+  line-height: 1;
+  margin-top: -4px;
+}
+
+.delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: hsl(0deg, 93%, 68%);
+  margin-right: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.delete:hover {
+  opacity: 0.8;
+}

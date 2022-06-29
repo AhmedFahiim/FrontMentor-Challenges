@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.top .home {
+  background-image: url(../images/desktop-image-hero-1.jpg);
+  background-size: cover;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.top .home .logo {
+  color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.top .home nav, .top .home .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.top .home .links {
+  margin-left: 50px;
+  margin-bottom: 0;
+  padding: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.top .home .links li {
+  margin-left: 20px;
+}
+.top .home a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+.top .discover {
+  padding: 60px 100px 150px !important;
+  position: relative;
+}
+.top .discover .head {
+  color: #222;
+  font-size: 45px;
+}
+.top .discover .text {
+  margin: 25px 0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 2;
+}
+.top .discover .shop-now {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.top .discover .arrow {
+  position: relative;
+  left: 10px;
+}
+.top .discover .arrows {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 25px 0px;
+  width: 20.6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.top .discover .arrows img {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.bottom .one img, .bottom .three img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+.bottom .one, .bottom .three {
+  padding: 0 !important;
+}
+.bottom .two {
+  padding: 50px !important;
+}
+.bottom .about-us {
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+.bottom .disc {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 2;
+}

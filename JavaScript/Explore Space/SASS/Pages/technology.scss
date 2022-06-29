@@ -1,0 +1,92 @@
+@use "../structure/header" as *;
+@use "../Helpers/global-rules" as *;
+@use "../Helpers/placeholders" as *;
+
+main {
+  background-image: url(../../assets/technology/background-technology-desktop.jpg);
+}
+.main-box {
+  position: relative;
+  top: 60px;
+  padding-left: 180px;
+  .space-lunch {
+    position: relative;
+    left: 30px;
+    color: rgba(#fff, 0.8);
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: uppercase;
+    &::before {
+      position: absolute;
+      content: "03";
+      left: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(#fff, 0.4);
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+  .techs {
+    .content {
+      position: relative;
+      left: 140px;
+      top: 100px;
+      .terminolgy {
+        color: rgba(#fff, 0.6);
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 3px;
+      }
+      .name {
+        font-size: 40px;
+        color: rgba(#fff, 0.9);
+        margin: {
+          top: 15px;
+          bottom: 30px;
+        }
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 3px;
+      }
+      .description {
+        color: rgba(#fff, 0.6);
+        line-height: 2;
+        font-weight: 100;
+      }
+      .numbers {
+        position: absolute;
+        left: -140px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .number {
+          @extend %flex-center;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          font-size: 21px;
+          color: rgba(#fff, 0.8);
+          border: 1px solid rgba(#fff, 0.5);
+          cursor: pointer;
+          transition: 0.3s;
+          &.active {
+            background-color: #fff;
+            color: #0b0e17;
+          }
+        }
+      }
+    }
+    .image {
+      position: absolute;
+      right: 0;
+      top: 30px;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
