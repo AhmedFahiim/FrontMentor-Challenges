@@ -10,7 +10,7 @@ let remains = document.getElementById("task-remains");
 let tabs = document.querySelectorAll(".tab");
 let clearComp = document.getElementById("clear");
 
-let activeTab = "";
+let activeTab = "All";
 
 // function to add click event on nav elemnts
 function addClickEvent() {
@@ -53,12 +53,17 @@ function createTask() {
       deleteTask.className = "delete-Task";
       deleteTask.textContent = "X";
 
-      // appending the elemnts
-      handler.append(checked);
-      taskBody.append(taskDisc);
-      taskHolder.append(handler, taskBody, deleteTask);
-      taskArea.prepend(taskHolder);
+      // check the task value
 
+      if (!checkActiveTask()) {
+        return;
+      } else {
+        // appending the elemnts
+        handler.append(checked);
+        taskBody.append(taskDisc);
+        taskHolder.append(handler, taskBody, deleteTask);
+        taskArea.prepend(taskHolder);
+      }
       // change the count of active tasks
       getActiveTasks();
     }
@@ -131,4 +136,18 @@ function filterTasks() {
     if (e.classList.contains(activeTab)) e.style.display = "flex";
     else e.style.display = "none";
   });
+}
+
+// function to check if the task already active or not
+function checkActiveTask() {
+  let activeTask = document.querySelectorAll(".new-task.Active .task-name");
+  let R = true;
+  if (activeTask.length >= 1) {
+    activeTask.forEach((e) => {
+      if (e.textContent.toLowerCase() === taskDiscInp.value.toLowerCase()) {
+        R = false;
+      }
+    });
+  }
+  return R;
 }
